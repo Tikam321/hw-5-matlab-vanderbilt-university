@@ -2,3 +2,18 @@
 function out=eligible(v,q)
 out=((v+q)/2>= 92 && v>88 && q>88);
 end
+#2:
+function  R=fare(distance,age)
+distance=round(distance);
+if(distance>10)
+      R=2+9*0.25+(distance-10)*0.1;
+else
+    if(distance>1)
+    R=2+.25*(distance-1);
+    else
+        R=2;
+    end
+end
+if(age<=18 || age>=60)
+    R=R*(0.8);  
+end
